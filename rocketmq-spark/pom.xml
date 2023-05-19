@@ -34,8 +34,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <rocketmq.version>4.9.4</rocketmq.version>
-        <spark.version>3.3.1</spark.version>
-        <scala.version>2.12.10</scala.version>
+        <spark.version>3.2.1</spark.version>
+        <scala.version>2.12.17</scala.version>
         <scala.binary.version>2.12</scala.binary.version>
         <commons-lang.version>2.5</commons-lang.version>
     </properties>
@@ -45,16 +45,19 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_${scala.binary.version}</artifactId>
             <version>${spark.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-streaming_${scala.binary.version}</artifactId>
             <version>${spark.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_${scala.binary.version}</artifactId>
             <version>${spark.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.rocketmq</groupId>
@@ -76,6 +79,7 @@
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
             <version>${commons-lang.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!--test -->
